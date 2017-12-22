@@ -319,3 +319,20 @@ services:
         volumes:
             - '/var/run/docker.sock:/var/run/docker.sock'
         command: portainer --schedule @midnight --cleanup
+
+    # ----------------------------------------
+    # NZBGET
+    # ----------------------------------------
+    sonarr:
+        image: linuxserver/nzbget
+        container_name: nzbget
+        restart: unless-stopped
+        network_mode: "bridge"
+        ports:
+            - '${IP_ADDRESS}:6789:6789'
+        environment:
+            - PUID=${PUID}
+            - PGID=${PGID}
+        volumes:
+            - './nzbget:/config'
+            - './content:/downloads'

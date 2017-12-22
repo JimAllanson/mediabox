@@ -61,6 +61,7 @@ mkdir -p portainer
 mkdir -p radarr
 mkdir -p sickrage
 mkdir -p sonarr
+mkdir -p nzbget
 mkdir -p www
 # Move the PIA VPN files
 mv ca.ovpn delugevpn/config/openvpn/ca.ovpn > /dev/null 2>&1
