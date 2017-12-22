@@ -323,7 +323,7 @@ services:
     # ----------------------------------------
     # NZBGET
     # ----------------------------------------
-    sonarr:
+    nzbget:
         image: linuxserver/nzbget
         container_name: nzbget
         restart: unless-stopped
